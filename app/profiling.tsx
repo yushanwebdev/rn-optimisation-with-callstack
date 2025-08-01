@@ -37,8 +37,14 @@ export default function Profiling() {
 const Button = memo(
   ({ title, onPress }: { title: string; onPress: () => void }) => {
     return (
-      <Pressable style={styles.button} onPress={onPress}>
-        <Text>{title}</Text>
+      <Pressable
+        onPress={onPress}
+        style={({ pressed }) => [
+          styles.button,
+          pressed && styles.buttonPressed,
+        ]}
+      >
+        <Text style={styles.buttonText}>{title}</Text>
       </Pressable>
     );
   }
@@ -95,6 +101,9 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: "center",
     marginBottom: 12,
+  },
+  buttonPressed: {
+    opacity: 0.5, // darker shade for pressed state
   },
   secondaryButton: {
     backgroundColor: "#6c757d",
