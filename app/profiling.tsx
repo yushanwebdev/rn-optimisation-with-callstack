@@ -1,17 +1,17 @@
-import React, { memo, useCallback } from "react";
+import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Profiling() {
   const [count, setCount] = React.useState(0);
   const [second, setSecond] = React.useState(0);
 
-  const onPressHandler = useCallback(() => {
+  const onPressHandler = () => {
     setCount(count + 1);
-  }, [count]);
+  };
 
-  const onPressSecondHandler = useCallback(() => {
+  const onPressSecondHandler = () => {
     setSecond(second + 1);
-  }, [second]);
+  };
 
   return (
     <View style={styles.container}>
@@ -34,22 +34,16 @@ export default function Profiling() {
   );
 }
 
-const Button = memo(
-  ({ title, onPress }: { title: string; onPress: () => void }) => {
-    return (
-      <Pressable
-        onPress={onPress}
-        style={({ pressed }) => [
-          styles.button,
-          pressed && styles.buttonPressed,
-        ]}
-      >
-        <Text style={styles.buttonText}>{title}</Text>
-      </Pressable>
-    );
-  }
-);
-
+const Button = ({ title, onPress }: { title: string; onPress: () => void }) => {
+  return (
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [styles.button, pressed && styles.buttonPressed]}
+    >
+      <Text style={styles.buttonText}>{title}</Text>
+    </Pressable>
+  );
+};
 const styles = StyleSheet.create({
   container: {
     flex: 1,

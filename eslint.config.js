@@ -7,4 +7,10 @@ module.exports = defineConfig([
   {
     ignores: ['dist/*'],
   },
+  {
+    plugins: ['react-compiler'],
+    rules: {
+      'react-compiler/react-compiler': 'error',
+    },
+  },
 ]);
