@@ -1,9 +1,17 @@
-import React from "react";
-import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
+import React, { memo, useCallback } from "react";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Profiling() {
   const [count, setCount] = React.useState(0);
   const [second, setSecond] = React.useState(0);
+
+  const onPressHandler = useCallback(() => {
+    setCount(count + 1);
+  }, [count]);
+
+  const onPressSecondHandler = useCallback(() => {
+    setSecond(second + 1);
+  }, [second]);
 
   return (
     <View style={styles.container}>
@@ -19,75 +27,81 @@ export default function Profiling() {
         </View>
       </View>
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={styles.button} onPress={() => setCount(count + 1)}>
-          <Text style={styles.buttonText}>Press one</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.secondaryButton]} onPress={() => setSecond(second + 1)}>
-          <Text style={styles.buttonText}>Press two</Text>
-        </TouchableOpacity>
+        <Button title="Press one" onPress={onPressHandler} />
+        <Button title="Press two" onPress={onPressSecondHandler} />
       </View>
     </View>
   );
 }
 
+const Button = memo(
+  ({ title, onPress }: { title: string; onPress: () => void }) => {
+    return (
+      <Pressable style={styles.button} onPress={onPress}>
+        <Text>{title}</Text>
+      </Pressable>
+    );
+  }
+);
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: "#f5f5f5",
     padding: 20,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   title: {
     fontSize: 32,
-    fontWeight: 'bold',
-    color: '#333',
-    textAlign: 'center',
+    fontWeight: "bold",
+    color: "#333",
+    textAlign: "center",
     marginBottom: 40,
   },
   countersContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+    flexDirection: "row",
+    justifyContent: "space-around",
     marginBottom: 40,
   },
   counterBox: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     padding: 20,
     borderRadius: 12,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
     minWidth: 120,
-    alignItems: 'center',
+    alignItems: "center",
   },
   counterLabel: {
     fontSize: 14,
-    color: '#666',
+    color: "#666",
     marginBottom: 8,
   },
   counterValue: {
     fontSize: 36,
-    fontWeight: 'bold',
-    color: '#4a90e2',
+    fontWeight: "bold",
+    color: "#4a90e2",
   },
   buttonsContainer: {
     gap: 12,
   },
   button: {
-    backgroundColor: '#4a90e2',
+    backgroundColor: "#4a90e2",
     paddingVertical: 16,
     paddingHorizontal: 32,
     borderRadius: 8,
-    alignItems: 'center',
+    alignItems: "center",
     marginBottom: 12,
   },
   secondaryButton: {
-    backgroundColor: '#6c757d',
+    backgroundColor: "#6c757d",
   },
   buttonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
 });
