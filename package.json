@@ -8,7 +8,14 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "flashlight:measure": "flashlight measure",
+    "flashlight:test:android": "flashlight test --bundleId com.yushan_blott.rnoptimisationwithcallstack --testCommand \"yarn android\" --duration 10000",
+    "flashlight:test:ios": "flashlight test --bundleId com.yushan-blott.rnoptimisationwithcallstack --testCommand \"yarn ios\" --duration 10000",
+    "flashlight:startup:android": "flashlight test --bundleId com.yushan_blott.rnoptimisationwithcallstack --testCommand \"./flashlight-tests/app-startup.sh android\" --duration 10000 --resultsFilePath ./flashlight-results/startup-android.json",
+    "flashlight:startup:ios": "flashlight test --bundleId com.yushan-blott.rnoptimisationwithcallstack --testCommand \"./flashlight-tests/app-startup.sh ios\" --duration 10000 --resultsFilePath ./flashlight-results/startup-ios.json",
+    "flashlight:profiling:android": "flashlight test --bundleId com.yushan_blott.rnoptimisationwithcallstack --testCommand \"./flashlight-tests/profiling-screen-test.sh android\" --duration 15000 --resultsFilePath ./flashlight-results/profiling-android.json",
+    "flashlight:report": "flashlight report ./flashlight-results/results.json"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

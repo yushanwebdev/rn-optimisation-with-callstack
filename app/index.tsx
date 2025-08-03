@@ -1,14 +1,14 @@
 import { useNavigation } from "@react-navigation/native";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 
 export default function Home() {
   const navigation = useNavigation();
 
   return (
     <View>
-      <TouchableOpacity onPress={() => navigation.navigate("profiling")}>
+      <Pressable onPress={() => navigation.navigate("profiling")}>
         <Text>Profiling</Text>
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 }
