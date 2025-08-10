@@ -72,7 +72,3 @@ The app uses [file-based routing](https://docs.expo.dev/router/introduction) wit
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests with additional optimization examples or performance improvements.
-
-## License
-
-This project is available for educational purposes and performance testing.
