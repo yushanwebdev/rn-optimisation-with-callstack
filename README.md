@@ -22,7 +22,7 @@ A comprehensive React Native application demonstrating various performance optim
 
 ### Prerequisites
 - Node.js (v18 or higher)
-- npm or yarn
+- bun
 - Expo CLI
 - iOS Simulator (for Mac) or Android Emulator
 
