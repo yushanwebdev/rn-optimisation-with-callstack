@@ -1,28 +1,12 @@
 # React Native Performance Optimization Lab 🚀
 
-A comprehensive React Native application demonstrating various performance optimization techniques and profiling strategies. This project showcases best practices for building high-performance mobile applications using Expo and React Native.
-
-## Features & Optimizations
-
-### Performance Enhancements
-- **React Compiler Integration**: Automatic optimization of React components
-- **Flashlight Performance Monitoring**: JavaScript FPS measurement and profiling
-- **Memory Leak Detection**: Tools and examples for identifying JS memory leaks
-- **Optimized List Rendering**: Efficient handling of large data sets
-- **Atomic State Management**: Performance-focused state updates
-- **Slow Component Detection**: Identification and optimization of rendering bottlenecks
-
-### Profiling Capabilities
-- Interactive performance counters
-- Real-time FPS monitoring
-- Memory usage tracking
-- Component render profiling
+An experimental React Native application created for hands-on learning while following **[The Ultimate Guide to React Native Optimization by Callstack](https://www.callstack.com/ebooks/the-ultimate-guide-to-react-native-optimization)**. This lab environment allows you to practice and experiment with the performance optimization techniques and profiling strategies covered in Callstack's official guide.
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v18 or higher)
-- bun
+
+- Bun
 - Expo CLI
 - iOS Simulator (for Mac) or Android Emulator
 
@@ -34,13 +18,19 @@ A comprehensive React Native application demonstrating various performance optim
    bun install
    ```
 
-2. Start the development server:
+2. Prebuild the native projects:
+
+   ```bash
+   bun expo prebuild
+   ```
+
+3. Start the development server:
 
    ```bash
    bun start
    ```
 
-3. Run on your preferred platform:
+4. Run on your preferred platform:
    - Press `i` for iOS Simulator
    - Press `a` for Android Emulator
    - Scan QR code with Expo Go app for physical device
@@ -58,14 +48,15 @@ The app uses [file-based routing](https://docs.expo.dev/router/introduction) wit
 
 - **Flashlight**: Performance measurement and monitoring
 - **React DevTools**: Component profiling and debugging
-- **Expo Developer Tools**: Built-in debugging and profiling
 
 ## Resources
 
 ### Performance Optimization
+
 - [React Native Performance Guide by Callstack](https://www.callstack.com/ebooks/the-ultimate-guide-to-react-native-optimization)
 
 ### General Documentation
+
 - [Expo Documentation](https://docs.expo.dev/)
 - [React Native Documentation](https://reactnative.dev/)
 
