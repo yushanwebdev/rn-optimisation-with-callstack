@@ -31,13 +31,13 @@ A comprehensive React Native application demonstrating various performance optim
 1. Clone the repository and install dependencies:
 
    ```bash
-   npm install
+   bun install
    ```
 
 2. Start the development server:
 
    ```bash
-   npx expo start
+   bun start
    ```
 
 3. Run on your preferred platform:
@@ -54,16 +54,6 @@ The app uses [file-based routing](https://docs.expo.dev/router/introduction) wit
 - **hooks/**: Custom React hooks for performance optimization
 - **utils/**: Utility functions and helpers
 
-## Performance Best Practices
-
-This project demonstrates several key optimization techniques:
-
-1. **Memoization**: Using `React.memo`, `useMemo`, and `useCallback` to prevent unnecessary re-renders
-2. **List Optimization**: Implementing `FlatList` with proper `keyExtractor` and `getItemLayout`
-3. **State Management**: Atomic updates to minimize re-render scope
-4. **Lazy Loading**: Component and data lazy loading strategies
-5. **Profiling**: Built-in performance monitoring and debugging tools
-
 ## Development Tools
 
 - **Flashlight**: Performance measurement and monitoring
@@ -73,14 +63,11 @@ This project demonstrates several key optimization techniques:
 ## Resources
 
 ### Performance Optimization
-- [React Native Performance Guide](https://reactnative.dev/docs/performance)
-- [Expo Performance Tips](https://docs.expo.dev/guides/performance/)
-- [React Compiler Documentation](https://react.dev/learn/react-compiler)
+- [React Native Performance Guide by Callstack](https://www.callstack.com/ebooks/the-ultimate-guide-to-react-native-optimization)
 
 ### General Documentation
 - [Expo Documentation](https://docs.expo.dev/)
 - [React Native Documentation](https://reactnative.dev/)
-- [React Navigation](https://reactnavigation.org/)
 
 ## Contributing
 
