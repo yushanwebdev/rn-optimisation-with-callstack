@@ -1,50 +1,91 @@
-# Welcome to your Expo app 👋
+# React Native Performance Optimization Lab 🚀
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A comprehensive React Native application demonstrating various performance optimization techniques and profiling strategies. This project showcases best practices for building high-performance mobile applications using Expo and React Native.
 
-## Get started
+## Features & Optimizations
 
-1. Install dependencies
+### Performance Enhancements
+- **React Compiler Integration**: Automatic optimization of React components
+- **Flashlight Performance Monitoring**: JavaScript FPS measurement and profiling
+- **Memory Leak Detection**: Tools and examples for identifying JS memory leaks
+- **Optimized List Rendering**: Efficient handling of large data sets
+- **Atomic State Management**: Performance-focused state updates
+- **Slow Component Detection**: Identification and optimization of rendering bottlenecks
+
+### Profiling Capabilities
+- Interactive performance counters
+- Real-time FPS monitoring
+- Memory usage tracking
+- Component render profiling
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+- Expo CLI
+- iOS Simulator (for Mac) or Android Emulator
+
+### Installation
+
+1. Clone the repository and install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Start the development server:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. Run on your preferred platform:
+   - Press `i` for iOS Simulator
+   - Press `a` for Android Emulator
+   - Scan QR code with Expo Go app for physical device
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+The app uses [file-based routing](https://docs.expo.dev/router/introduction) with the following key directories:
 
-## Get a fresh project
+- **app/**: Main application screens and navigation
+- **components/**: Reusable React components
+- **hooks/**: Custom React hooks for performance optimization
+- **utils/**: Utility functions and helpers
 
-When you're ready, run:
+## Performance Best Practices
 
-```bash
-npm run reset-project
-```
+This project demonstrates several key optimization techniques:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+1. **Memoization**: Using `React.memo`, `useMemo`, and `useCallback` to prevent unnecessary re-renders
+2. **List Optimization**: Implementing `FlatList` with proper `keyExtractor` and `getItemLayout`
+3. **State Management**: Atomic updates to minimize re-render scope
+4. **Lazy Loading**: Component and data lazy loading strategies
+5. **Profiling**: Built-in performance monitoring and debugging tools
 
-## Learn more
+## Development Tools
 
-To learn more about developing your project with Expo, look at the following resources:
+- **Flashlight**: Performance measurement and monitoring
+- **React DevTools**: Component profiling and debugging
+- **Expo Developer Tools**: Built-in debugging and profiling
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Resources
 
-## Join the community
+### Performance Optimization
+- [React Native Performance Guide](https://reactnative.dev/docs/performance)
+- [Expo Performance Tips](https://docs.expo.dev/guides/performance/)
+- [React Compiler Documentation](https://react.dev/learn/react-compiler)
 
-Join our community of developers creating universal apps.
+### General Documentation
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Native Documentation](https://reactnative.dev/)
+- [React Navigation](https://reactnavigation.org/)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Contributing
+
+Contributions are welcome! Please feel free to submit pull requests with additional optimization examples or performance improvements.
+
+## License
+
+This project is available for educational purposes and performance testing.
