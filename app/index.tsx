@@ -38,6 +38,15 @@ export default function Home() {
             Atomic State Management
           </Text>
         </Pressable>
+
+        <Pressable
+          onPress={() => router.push("/concurrent-react/slow-components-management")}
+          style={styles.button}
+        >
+          <Text style={{ color: "white", fontSize: 16 }}>
+            Slow Components Management
+          </Text>
+        </Pressable>
       </View>
     </View>
   );
