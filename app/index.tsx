@@ -40,12 +40,21 @@ export default function Home() {
         </Pressable>
 
         <Pressable
-          onPress={() => router.push("/concurrent-react/slow-components-management")}
+          onPress={() =>
+            router.push("/concurrent-react/slow-components-management")
+          }
           style={styles.button}
         >
           <Text style={{ color: "white", fontSize: 16 }}>
             Slow Components Management
           </Text>
+        </Pressable>
+
+        <Pressable
+          onPress={() => router.push("/concurrent-react/stale-value")}
+          style={styles.button}
+        >
+          <Text style={{ color: "white", fontSize: 16 }}>Stale Value</Text>
         </Pressable>
       </View>
     </View>
