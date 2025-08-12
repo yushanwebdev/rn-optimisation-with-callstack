@@ -1,7 +1,7 @@
 import { useDeferredValue, useState } from "react";
 import { ActivityIndicator, Button } from "react-native";
-import CounterNumber from "./CounterNumber";
-import SlowComponent from "./SlowComponent";
+import CounterNumber from "../CounterNumber";
+import SlowComponent from "../SlowComponent";
 
 export default function SlowComponentsManagement() {
   const [count, setCount] = useState(0);

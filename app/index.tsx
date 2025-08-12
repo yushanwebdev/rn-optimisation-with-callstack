@@ -56,6 +56,13 @@ export default function Home() {
         >
           <Text style={{ color: "white", fontSize: 16 }}>Stale Value</Text>
         </Pressable>
+
+        <Pressable
+          onPress={() => router.push("/concurrent-react/transitions")}
+          style={styles.button}
+        >
+          <Text style={{ color: "white", fontSize: 16 }}>Transitions</Text>
+        </Pressable>
       </View>
     </View>
   );
