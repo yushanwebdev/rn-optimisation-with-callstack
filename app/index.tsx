@@ -63,6 +63,15 @@ export default function Home() {
         >
           <Text style={{ color: "white", fontSize: 16 }}>Transitions</Text>
         </Pressable>
+
+        <Pressable
+          onPress={() => router.push("/react-compiler-eslint")}
+          style={styles.button}
+        >
+          <Text style={{ color: "white", fontSize: 16 }}>
+            React Compiler Test
+          </Text>
+        </Pressable>
       </View>
     </View>
   );

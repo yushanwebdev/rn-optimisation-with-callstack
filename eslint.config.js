@@ -8,7 +8,9 @@ module.exports = defineConfig([
     ignores: ['dist/*'],
   },
   {
-    plugins: ['react-compiler'],
+    plugins: {
+      'react-compiler': require('eslint-plugin-react-compiler'),
+    },
     rules: {
       'react-compiler/react-compiler': 'error',
     },
